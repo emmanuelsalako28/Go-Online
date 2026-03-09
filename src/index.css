@@ -1,0 +1,8 @@
+/* Basic reset if needed, but legacy CSS should handle most */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
