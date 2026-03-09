@@ -1,8 +1,43 @@
-/* Basic reset if needed, but legacy CSS should handle most */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #a4c639;
+  --text-dark: #1e1e1e;
+  --text-light: #666;
+  --bg-gray: #f7f7f7;
+  --border-radius: 12px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
   width: 100%;
   overflow-x: hidden;
+  font-family: 'Inter', sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings: Space Grotesk for a modern startup feel */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Space Grotesk', sans-serif !important;
+}
+
+/* Body, forms, and placeholders: Inter for clean readability */
+p,
+a,
+span,
+button,
+input,
+select,
+textarea,
+::placeholder {
+  font-family: 'Inter', sans-serif !important;
 }
