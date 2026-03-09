@@ -1501,16 +1501,98 @@ footer .contact-form button.filled-button:hover {
 	}
 }
 
-form {
-	display: flex;
-	flex-direction: column;
+/* ===========================
+   Callback / Project Form
+   Unified mobile-first styles
+   =========================== */
+
+/* Reset all fieldset borders */
+.callback-form fieldset,
+.contact-form fieldset {
+	border: none;
+	padding: 0;
+	margin: 0;
 }
 
-.callback-form .contact-form input {
-	font-family: 'Poppins', sans-serif;
-	padding: .5rem 1rem 0;
-	/* color: #526b63; */
-	font-size: 20px;
-	line-height: 1.125rem;
+/* Base style for ALL form controls */
+.callback-form .contact-form .form-control,
+.callback-form .contact-form input,
+.callback-form .contact-form select,
+.callback-form .contact-form textarea {
+	font-family: 'Inter', sans-serif !important;
+	font-size: 15px;
+	font-weight: 400;
+	color: #333 !important;
+	background-color: #fff;
+	border: 1.5px solid #dde0e4;
+	border-radius: 50px;
+	/* pill shape to match other inputs */
+	padding: 13px 22px;
+	height: 52px;
+	line-height: 1.4;
+	width: 100%;
+	margin-bottom: 16px;
+	box-shadow: none;
+	outline: none;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	transition: border-color 0.25s ease, box-shadow 0.25s ease;
+	display: block;
+	box-sizing: border-box;
+}
 
+/* Selects need extra right padding for the custom arrow */
+.callback-form .contact-form select {
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: right 18px center;
+	padding-right: 44px;
+	cursor: pointer;
+}
+
+/* Textarea should not be pill shaped */
+.callback-form .contact-form textarea.form-control,
+.callback-form .contact-form textarea {
+	border-radius: 16px;
+	height: 140px;
+	min-height: 120px;
+	max-height: 300px;
+	resize: vertical;
+	padding: 14px 22px;
+}
+
+/* Focus state */
+.callback-form .contact-form .form-control:focus,
+.callback-form .contact-form input:focus,
+.callback-form .contact-form select:focus,
+.callback-form .contact-form textarea:focus {
+	border-color: #a4c639;
+	box-shadow: 0 0 0 4px rgba(164, 198, 57, 0.15);
+	outline: none;
+}
+
+/* Placeholder colour */
+.callback-form .contact-form ::placeholder {
+	color: #aab0bb;
+	opacity: 1;
+}
+
+/* Responsive: ensure fields are full-width on mobile */
+@media (max-width: 768px) {
+
+	.callback-form .contact-form .form-control,
+	.callback-form .contact-form input,
+	.callback-form .contact-form select,
+	.callback-form .contact-form textarea {
+		font-size: 16px;
+		/* Prevents iOS zoom-in on focus */
+		height: 52px;
+		margin-bottom: 12px;
+	}
+
+	.callback-form .contact-form textarea.form-control,
+	.callback-form .contact-form textarea {
+		height: 130px;
+	}
 }
