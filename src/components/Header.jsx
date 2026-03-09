@@ -31,12 +31,19 @@ const Header = () => {
             <Link className="navbar-brand" to="/">
               <h2>Go-Online NG</h2>
             </Link>
-            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-              aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarResponsive"
+              aria-controls="navbarResponsive"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
               <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarResponsive">
-              <ul className="navbar-nav ml-auto">
+              <ul className="navbar-nav ms-auto">
                 <li className="nav-item">
                   <NavLink className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`} to="/">Home</NavLink>
                 </li>
@@ -57,6 +64,7 @@ const Header = () => {
                 </li>
               </ul>
             </div>
+
           </div>
         </nav>
       </header>
