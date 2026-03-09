@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import $ from '../jquery-polyfill';
+import { countries } from '../utils/countries';
 
 const Home = () => {
     useEffect(() => {
@@ -322,11 +323,11 @@ const Home = () => {
                                         </div>
                                         <div className="col-lg-4 col-md-12 col-sm-12">
                                             <fieldset>
-                                                <select className="form-control" id="subject" name="country" defaultValue="">
+                                                <select className="form-control" id="country" name="country" defaultValue="">
                                                     <option value="" disabled>Select a country</option>
-                                                    <option value="Afghanistan">Afghanistan</option>
-                                                    <option value="Nigeria">Nigeria</option>
-                                                    {/* Add other core options or keep simple for now */}
+                                                    {countries.map((country) => (
+                                                        <option key={country} value={country}>{country}</option>
+                                                    ))}
                                                 </select>
                                             </fieldset>
                                         </div>
